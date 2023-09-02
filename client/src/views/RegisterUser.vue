@@ -10,20 +10,20 @@ import { ref } from 'vue'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'vue-router' // import router
 
-const email = ref('')
-const password = ref('')
+const email = ref('');
+const password = ref('');
 
 const router = useRouter() // get a reference to our vue router
 const register = () => {
-    createUserWithEmailAndPassword(getAuth(),email.value, password.value) // need .value because ref()
-    .then((data) => {
-      console.log('Successfully registered!', data);
-      router.push('/lobby') // redirect to the lobby
-    })
-    .catch(error => {
-      console.log(error.code)
-      alert(error.message);
-    });
+  createUserWithEmailAndPassword(getAuth(),email.value, password.value) // need .value because ref()
+  .then((data) => {
+    console.log('Successfully registered!', data);
+    router.push('/lobby'); // redirect to the lobby
+  })
+  .catch(error => {
+    console.log(error.code);
+    alert(error.message);
+  });
 }
 
 </script>
