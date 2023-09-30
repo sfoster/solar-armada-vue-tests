@@ -7,6 +7,10 @@ const router = createRouter({
             component: () => import('../views/LandingPage.vue')
         },
         {
+            path: '/lobby',
+            component: () => import('../views/LobbyFeed.vue'),
+        },
+        {
             path: '/register',
             component: () => import('../views/RegisterUser.vue')
         },
@@ -15,8 +19,8 @@ const router = createRouter({
             component: () => import('../views/SignIn.vue')
         },
         {
-            path: '/lobby',
-            component: () => import('../views/LobbyFeed.vue'),
+            path: '/tres',
+            component: () => import('../views/TresScene.vue'),
         }
     ]
 })
