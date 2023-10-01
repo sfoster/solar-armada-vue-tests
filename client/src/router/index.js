@@ -21,6 +21,10 @@ const router = createRouter({
         {
             path: '/tres',
             component: () => import('../views/TresScene.vue'),
+        },
+        {
+            path: '/three',
+            component: () => import('../views/ThreeScene.vue'),
         }
     ]
 })

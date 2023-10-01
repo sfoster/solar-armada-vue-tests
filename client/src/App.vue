@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/"> Home </router-link> |
       <router-link to="/tres"> TresJs Test </router-link> |
+      <router-link to="/three"> Three.js Test </router-link> |
       <span> 
         <router-link to="/lobby"> Lobby </router-link> |
       </span>
