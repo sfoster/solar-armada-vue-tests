@@ -2,19 +2,17 @@
 import { Color } from 'three';
 import { TresCanvas } from '@tresjs/core'
 
-const exportedObject = {
+export default {
   components: {
     TresCanvas,
+  },
+  setup() {
+    return {
+      bgColor: new Color('#82DBC5'),
+      TresCanvas,
+    };
   }
 };
-exportedObject.setup = function() {
-  return {
-    bgColor: new Color('#82DBC5'),
-    TresCanvas,
-  };
-};
-
-export default exportedObject;
 </script>
 
 <template>
